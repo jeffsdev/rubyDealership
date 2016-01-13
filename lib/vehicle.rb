@@ -23,6 +23,10 @@ class Vehicle
     @@vehicle
   end
 
+  define_method(:save) do
+    @@vehicle.push(self)
+  end
+
 end
 
 # class Dealership
