@@ -6,6 +6,10 @@ require('dealership')
 ##### Specs for Vehicle class =========================>
     #
 describe('Vehicle') do
+  before() do
+    Vehicle.clear()
+  end
+
   describe('#make') do
     it('returns the make of the vehicle') do
       test_vehicle = Vehicle.new('Ford', 'Ranger', 2003)
@@ -87,6 +91,10 @@ end
 ##### Specs for Dealership class =========================>
     #
 describe('Dealership') do
+  before() do
+    Dealership.clear()
+  end
+  
   describe('#name') do
     it('returns the name of the dealership') do
       test_dealership = Dealership.new("Bob's Used Cars")
@@ -121,4 +129,13 @@ describe('Dealership') do
       expect(Dealership.all()).to(eq([test_dealership]))
     end
   end
+
+  describe(".clear") do
+    it("empties out all the saved dealerships") do
+      Dealership.new("Bob's Used Cars").save()
+      Dealership.clear()
+      expect(Dealership.all()).to(eq([]))
+    end
+  end
+
 end
