@@ -1,9 +1,10 @@
 require('rspec')
 require('vehicle')
 require('dealership')
-#
-# Specs for Vehicle class ###############################
-#
+
+    #
+##### Specs for Vehicle class =========================>
+    #
 describe('Vehicle') do
   describe('#make') do
     it('returns the make of the vehicle') do
@@ -71,10 +72,9 @@ describe('Vehicle') do
   end
 end
 
-#
-# Specs for Dealership class ###############################
-#
-
+    #
+##### Specs for Dealership class =========================>
+    #
 describe('Dealership') do
   describe('#name') do
     it('returns the name of the dealership') do
@@ -83,8 +83,19 @@ describe('Dealership') do
     end
   end
 
+  describe('#id') do
+    it('returns the id of a dealership') do
+      test_dealership = Dealership.new("Bob's Used Cars")
+      expect(test_dealership.id()).to(eq(1))
+    end
+  end
 
-
+  describe("#cars") do
+    it('returns an empty array of cars for the dealership') do
+      test_dealership = Dealership.new("Bob's Used Cars")
+      expect(test_dealership.cars()).to(eq([]))
+    end
+  end
 
 
 
