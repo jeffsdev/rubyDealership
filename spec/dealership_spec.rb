@@ -38,4 +38,14 @@ describe('#save') do
   end
 end
 
+describe('.clear') do
+  it('empties out all of the saved vehicles') do
+    Vehicle.new('Ford', 'Ranger', 2003).save()
+    Vehicle.clear()
+    expect(Vehicle.clear()).to(eq([]))
+  end
+end
+
+
+
 end
