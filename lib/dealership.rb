@@ -19,5 +19,12 @@ class Dealership
     @cars
   end
 
+  define_singleton_method(:all) do
+    @@dealerships
+  end
+
+  define_method(:save) do
+    @@dealerships.push(self)
+  end
 
 end
