@@ -46,6 +46,12 @@ describe('.clear') do
   end
 end
 
+describe('#age') do
+  it('return the vehicles age') do
+    test_vehicle = Vehicle.new('Ford', 'Ranger', 2003)
+    expect(test_vehicle.age()).to(eq(13))
+  end
+end
 
 
 end

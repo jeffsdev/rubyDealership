@@ -31,6 +31,10 @@ class Vehicle
     @@vehicles = []
   end
 
+  define_method(:age) do
+    Time.new().year() - @year
+  end
+
 end
 
 # class Dealership
