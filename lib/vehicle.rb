@@ -5,6 +5,7 @@ class Vehicle
     @make = make
     @model = model
     @year = year
+    @id = @@vehicles.length + 1
   end
 
   define_method(:make) do
@@ -40,6 +41,10 @@ class Vehicle
     if (self.age <= 15) && (american_made.include?(@make))
       return true
     end
+  end
+
+  define_method(:id) do
+    @id
   end
 
 end
