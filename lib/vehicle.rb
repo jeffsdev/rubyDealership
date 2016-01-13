@@ -35,6 +35,13 @@ class Vehicle
     Time.new().year() - @year
   end
 
+  define_method(:worth_buying?) do
+    american_made = ["Ford", "General Motors", "Chevrolet", "Chrysler", "Tesla"]
+    if (self.age <= 15) && (american_made.include?(@make))
+      return true
+    end
+  end
+
 end
 
 # class Dealership

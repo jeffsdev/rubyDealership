@@ -53,5 +53,11 @@ describe('#age') do
   end
 end
 
+describe('#worth_buying?') do
+  it('returns true if the car is American made and less than 15 years old') do
+    test_vehicle = Vehicle.new('Ford', 'Ranger', 2003)
+    expect(test_vehicle.worth_buying?()).to(eq(true))
+  end
+end
 
 end
