@@ -1,2 +1,6 @@
 <h1>Dealership Page</h1>
-<a href="/new">Back</a>
+<ul>
+  <% @dealerships.each() do |dealership| %>
+  <li><a href="/dealerships/<%= dealership.id() %>"><%= dealership.name() %></a></li>
+  <% end %>
+</ul>
