@@ -1,15 +1,22 @@
 # Car Dealership
-**by Jeff Seymour and Riley Starnes**
 
-## Project
+#### By Jeff Seymour, Riley Starnes
+
+## Description
 Car Dealership is an exercise for practicing the use of instance methods and class methods in a Ruby/Sinatra application.
-
-## Objective
 Create a car dealership application which stores information about dealerships and the vehicles that they sell.
 
-##Installation
-Clone repository using the following url:
-https://github.com/Rilsta/dealership_ruby.git
+## Technologies Used
+HTML, CSS, Ruby, RSpec, Capybara, Sinatra
+
+## Setup
+Clone repository  
+```bundle install```  
+```ruby app.rb```  
+View in browser at localhost:4567
 
 ## License
-MIT License 2016
+Copyright (c) 2016 Jeff Seymour
+
+This software is licensed under the MIT license.
+
